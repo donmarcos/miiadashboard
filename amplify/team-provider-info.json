@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-miiadashboard-dev-173623-authRole",
+            "UnauthRoleArn": "arn:aws:iam::181571321432:role/amplify-miiadashboard-dev-173623-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::181571321432:role/amplify-miiadashboard-dev-173623-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-miiadashboard-dev-173623-deployment",
+            "UnauthRoleName": "amplify-miiadashboard-dev-173623-unauthRole",
+            "StackName": "amplify-miiadashboard-dev-173623",
+            "StackId": "arn:aws:cloudformation:us-west-2:181571321432:stack/amplify-miiadashboard-dev-173623/af553140-e021-11ea-867f-0a73b7e234e0",
+            "AmplifyAppId": "d10uoshwqn5jr"
+        },
+        "categories": {
+            "auth": {
+                "miiadashboard4bbaeea5": {}
+            }
+        }
+    }
+}
