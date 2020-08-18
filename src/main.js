@@ -22,7 +22,7 @@ import '@aws-amplify/ui-vue';
 
 Amplify.configure({
   Auth: {
-    identityPoolId: 'us-west-2:5485bf7d-0c66-4dc7-a804-e48c312152fe',
+    identityPoolId: 'us-west-2:7113c926-5b92-4390-aed2-61bb64231e8e',
     region: 'us-west-2'
   },
   Interactions: {
