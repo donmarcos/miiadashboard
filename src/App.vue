@@ -1,40 +1,34 @@
 <template>
   <div id="app">
-    <amplify-authenticator >
-     <amplify-sign-in header-text="MIIA Sign In" slot="sign-in"></amplify-sign-in>
-
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <div id="amplify-signout">
-       <amplify-sign-out></amplify-sign-out>
-    </div>
-
+    <amplify-authenticator v-bind:signInConfig="signInConfig">
+     <amplify-sign-in  header-text="MIIA Dashboard Sign In" slot="sign-in"></amplify-sign-in>
+       <router-view />
     </amplify-authenticator>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue"
+import { AmplifyAuthenticator, AmplifySignIn } from "aws-amplify-vue"
 
 export default {
   name: "App",
-  components: {
-    HelloWorld,
+  components: { AmplifyAuthenticator, AmplifySignIn },
+  data() {
+    return {
+      signInConfig: {
+        isSignUpDisplayed: true,
+      },
+    }
   },
 }
 </script>
-
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-}
-#amplify-signout {
-  width: 100px;
-  margin: 0 auto;
+  margin-top: 10px;
 }
 </style>
