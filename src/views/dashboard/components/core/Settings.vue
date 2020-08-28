@@ -9,10 +9,12 @@
       link
       min-width="100"
       style="position: fixed; top: 115px; right: -35px; border-radius: 8px;"
+      @click="setProvTypeList"
     >
       <v-icon large>
         mdi-settings
       </v-icon>
+      Provider Types
     </v-card>
 
     <v-menu
@@ -26,13 +28,27 @@
       offset-x
       origin="top right"
       transition="scale-transition"
+      
     >
+
       <v-card
         class="text-center mb-0"
         width="300"
       >
+
         <v-card-text>
-          <strong class="mb-3 d-inline-block">SIDEBAR FILTERS</strong>
+          <strong class="mb-3 d-inline-block">Provider Types List </strong>
+          <ul style="text-align: left;">
+           <li v-for="provtype in providerTypes" :key="provtype">
+            {{ provtype }}
+          </li>
+          </ul>
+
+
+          <v-divider class="my-4 secondary" />
+           <v-divider class="my-4 secondary" />
+
+          <strong class="mb-3 d-inline-block">UI Customization</strong>
 
           <v-item-group v-model="color">
             <v-item
@@ -126,58 +142,6 @@
             </v-item>
           </v-item-group>
 
-          <v-btn
-            block
-            class="mb-3"
-            color="success"
-            href="https://www.creative-tim.com/product/vuetify-material-dashboard"
-            default
-            rel="noopener"
-            target="_blank"
-          >
-            Free Download
-          </v-btn>
-
-          <v-btn
-            block
-            class="mb-3"
-            color="grey darken-1"
-            dark
-            href="https://vuetifyjs.com/components/api-explorer"
-            default
-            rel="noopener"
-            target="_blank"
-          >
-            Documentation
-          </v-btn>
-
-          <div class="my-12" />
-
-          <div>
-            <strong class="mb-3 d-inline-block">THANK YOU FOR SHARING!</strong>
-          </div>
-
-          <v-btn
-            class="ma-1"
-            color="#55acee"
-            dark
-            default
-            rounded
-          >
-            <v-icon>mdi-twitter</v-icon>
-            - 45
-          </v-btn>
-
-          <v-btn
-            class="ma-1"
-            color="#3b5998"
-            dark
-            default
-            rounded
-          >
-            <v-icon>mdi-facebook</v-icon>
-            - 50
-          </v-btn>
         </v-card-text>
       </v-card>
     </v-menu>
@@ -185,67 +149,72 @@
 </template>
 
 <script>
-  // Mixins
-  import Proxyable from 'vuetify/lib/mixins/proxyable'
-  import { mapMutations, mapState } from 'vuex'
+// Mixins
+import Proxyable from "vuetify/lib/mixins/proxyable"
+import { mapMutations, mapState, mapGetters } from "vuex"
 
-  export default {
-    name: 'DashboardCoreSettings',
+export default {
+  name: "DashboardCoreSettings",
 
-    mixins: [Proxyable],
+  mixins: [Proxyable],
 
-    data: () => ({
-      color: '#E91E63',
-      colors: [
-        '#9C27b0',
-        '#00CAE3',
-        '#4CAF50',
-        '#ff9800',
-        '#E91E63',
-        '#FF5252',
-      ],
-      image: 'https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-1.jpg',
-      images: [
-        'https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-1.jpg',
-        'https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-2.jpg',
-        'https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-3.jpg',
-        'https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-4.jpg',
-      ],
-      menu: false,
-      saveImage: '',
-      showImg: true,
-    }),
+  data: () => ({
+    providerTypes: [],
+    color: "#E91E63",
+    colors: ["#9C27b0", "#00CAE3", "#4CAF50", "#ff9800", "#E91E63", "#FF5252"],
+    image:
+      "https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-1.jpg",
+    images: [
+      "https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-1.jpg",
+      "https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-2.jpg",
+      "https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-3.jpg",
+      "https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-4.jpg",
+    ],
+    menu: false,
+    saveImage: "",
+    showImg: true,
+  }),
 
-    computed: {
-      ...mapState(['barImage']),
+  computed: {
+    ...mapState(["barImage"]),
+    ...mapGetters(["getProviderTypes"]),
+  },
+
+  watch: {
+    color(val) {
+      this.$vuetify.theme.themes[this.isDark ? "dark" : "light"].primary = val
     },
-
-    watch: {
-      color (val) {
-        this.$vuetify.theme.themes[this.isDark ? 'dark' : 'light'].primary = val
-      },
-      showImg (val) {
-        if (!val) {
-          this.saveImage = this.barImage
-          this.setBarImage('')
-        } else if (this.saveImage) {
-          this.setBarImage(this.saveImage)
-          this.saveImage = ''
-        } else {
-          this.setBarImage(val)
-        }
-      },
-      image (val) {
+    showImg(val) {
+      if (!val) {
+        this.saveImage = this.barImage
+        this.setBarImage("")
+      } else if (this.saveImage) {
+        this.setBarImage(this.saveImage)
+        this.saveImage = ""
+      } else {
         this.setBarImage(val)
-      },
+      }
     },
+    image(val) {
+      this.setBarImage(val)
+    },
+  },
 
-    methods: {
-      ...mapMutations({
-        setBarImage: 'SET_BAR_IMAGE',
-      }),
-    },
-  }
+  methods: {
+    ...mapMutations({
+      setBarImage: "SET_BAR_IMAGE",
+    }),
+    setProvTypeList(){
+      console.log("Set configuration Prov List here ")
+      var items = this.getProviderTypes.Items
+            for (var i = 0; i < items.length; i++) {
+              console.log("Side Menu Settingns type count " + items.[1].count)
+              this.providerTypes[i] = items[i].providertype
+          }
+    }
+  },
+
+}
 </script>
 
 <style lang="sass">

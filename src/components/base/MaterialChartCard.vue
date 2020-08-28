@@ -12,7 +12,7 @@
         :ratio="ratio"
         :responsive-options="responsiveOptions"
         :type="type"
-        style="max-height: 150px;"
+        style="max-height: 100%;max-width: 100%"
       />
     </template>
 
@@ -69,16 +69,17 @@
 <style lang="sass">
   .v-card--material-chart
     p
-      color: #999
+      color: #060100
 
     .v-card--material__heading
-      max-height: 185px
+      max-height: 385px
 
       .ct-label
-        color: inherit
-        opacity: .7
+        color: #060100
+        opacity: .900
         font-size: 0.975rem
-        font-weight: 100
+        font-weight: 900
+        fill: black
 
       .ct-grid
         stroke: rgba(255, 255, 255, 0.2)
