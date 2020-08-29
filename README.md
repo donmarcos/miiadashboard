@@ -8,9 +8,9 @@
      <td>User Profile</td>
   </tr>
   <tr>
-    <td><img src="screenshots/dashboardlogin.png" width=270 height=480></td>
-    <td><img src="screenshots/Searchproviderbot.png" width=270 height=480></td>
-    <td><img src="screenshots/userprofile.png" width=270 height=480></td>
+    <td><img src="screenshots/dashboardlogin.png" width=470 height=480></td>
+    <td><img src="screenshots/Searchproviderbot.png" width=470 height=480></td>
+    <td><img src="screenshots/userprofile.png" width=470 height=480></td>
   </tr>
  </table>
 
