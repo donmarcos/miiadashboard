@@ -1,7 +1,11 @@
 # miiadashboard
 
 
+
 <table>
+  <tr>
+   <td valign="top"><img src="screenshots/miiadiagram.png" ></td>
+  </tr>
   <tr>
     <td>Login Screen </td>
      <td>Main Dashboard</td>
