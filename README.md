@@ -4,7 +4,7 @@
 
 <table>
   <tr>
-   <td colspan="3" valign="top"><img src="screenshots/miiadiagram.png" ></td>
+   <td colspan="3" valign="top"><img src="screenshots/miiadiagram.png?xxx" ></td>
   </tr>
   <tr>
     <td>Login Screen </td>
