@@ -33,25 +33,12 @@
   </tr>
  </table>
 
-## Project setup
+## AWS Hackathon testing 
 ```
-npm install
+You can use the following URL to test the application 
+by signing up and create a new user 
+
+https://master.d3s7eipwj38e3u.amplifyapp.com/
+
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
