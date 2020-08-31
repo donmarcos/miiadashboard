@@ -131,6 +131,11 @@ export default {
         to: "/pages/provsearch",
       },
       {
+        title: "ML Predictions",
+        icon: "mdi-map-marker",
+        to: "/pages/mlpredict",
+      },
+      {
         title: "Map Locations",
         icon: "mdi-map-marker",
         to: "/maps/google-maps",

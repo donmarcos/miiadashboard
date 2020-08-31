@@ -1,7 +1,5 @@
 # miiadashboard
 
-
-
 <table>
   <tr>
    <td colspan="3" valign="top"><img src="screenshots/miiadiagram.png?xxx" ></td>
@@ -31,14 +29,25 @@
     <td valign="top"><img src="screenshots/Searchproviderbot.png" ></td>
     <td valign="top"><img src="screenshots/searchresultsemailsample.png" ></td>
   </tr>
+  <tr>
+	 <td>BMI Prediction</td>
+	 <td>Emotion Prediction</td>
+	 <td></td>
+	 
+  </tr>
+  <tr>
+    <td valign="top"><img src="screenshots/bmiprediction.png" ></td>
+    <td valign="top"><img src="screenshots/emotionprediction.png" ></td>
+    <td valign="top"></td>
+  </tr>
  </table>
 
-## AWS Hackathon testing 
+## AWS Hackathon testing
+
 ```
-You can use the following URL to test the application 
-by signing up and create a new user 
+You can use the following URL to test the application
+by signing up and create a new user
 
 https://master.d3s7eipwj38e3u.amplifyapp.com/
 
 ```
-

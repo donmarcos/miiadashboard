@@ -44,6 +44,11 @@ export default new Router({
         component: () => import('@/views/dashboard/pages/ProviderSearch'),
       },
       {
+        name: "ML Predictions",
+        path: "pages/mlpredict",
+        component: () => import("@/views/dashboard/pages/MLPredict"),
+      },
+      {
         name: "Typography",
         path: "components/typography",
         component: () => import("@/views/dashboard/component/Typography"),
